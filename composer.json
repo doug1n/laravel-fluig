@@ -10,8 +10,22 @@
     }
   ],
   "minimum-stability": "dev",
-  "require": {},
+  "require": {
+    "php": "^7.1",
+    "ext-soap": "*",
+    "ext-json": "*"
+  },
   "require-dev": {
     "orchestra/testbench": "3.8.x-dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "dougvobel\\Fluig\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "dougvobel\\Fluig\\Tests\\": "tests/"
+    }
   }
 }
