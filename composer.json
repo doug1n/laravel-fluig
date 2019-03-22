@@ -1,0 +1,17 @@
+{
+  "name": "dougvobel/laravel-fluig",
+  "description": "Tenha acesso aos webservices do fluig em seu Laravel.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Douglas Vieira Gomes",
+      "email": "douglasvieira17@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "require-dev": {
+    "orchestra/testbench": "3.8.x-dev"
+  }
+}
