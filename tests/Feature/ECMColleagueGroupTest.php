@@ -3,7 +3,7 @@
 namespace dougvobel\Fluig\Tests\Feature;
 
 
-use dougvobel\Fluig\ECMColleagueGroup;
+use dougvobel\Fluig\Services\ECMColleagueGroup;
 use dougvobel\Fluig\Tests\Traits\EnvironmentSetUp;
 use Orchestra\Testbench\TestCase;
 
@@ -12,12 +12,19 @@ class ECMColleagueGroupTest extends TestCase
     use EnvironmentSetUp;
 
     /** @test */
-    public function my_first_test_case()
+    public function has_group_test()
     {
-        $x = new ECMColleagueGroup();
-
-        $this->assertTrue($x->hasGroup('8zqha1qwusweli4k1457618082277', 'DEFAULTGROUP-1'));
+        $this->assertTrue((new ECMColleagueGroup())->hasGroup('8zqha1qwusweli4k1457618082277', 'DEFAULTGROUP-1'));
     }
 
+    /** @test */
+    public function get_colleague_groups_by_groupId_test()
+    {
+        $this->assertTrue(count((new ECMColleagueGroup())->getColleagueGroupsByGroupId('DEFAULTGROUP-1')) > 0);
+    }
 
+    public function get_all_colleague_groups_test()
+    {
+        $this->assertTrue(count((new ECMColleagueGroup())->getAllColleagueGroups()) > 0);
+    }
 }
