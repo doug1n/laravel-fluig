@@ -4,6 +4,7 @@ namespace dougvobel\Fluig\Services\Rest;
 
 
 use GuzzleHttp\Client;
+use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Subscriber\Oauth\Oauth1;
 
 class FluigRestService
@@ -12,13 +13,7 @@ class FluigRestService
 
     public function __construct()
     {
-        $this->client = new Client([
-            'base_url' => config('fluig.domain'),
-            'defaults' => [
-                'verify' => false,
-                'auth' => 'oauth'
-            ]
-        ]);
+        $stack = HandlerStack::create();
 
         $middleware = new Oauth1([
             'consumer_key' => config('fluig.consumerKey'),
@@ -27,7 +22,14 @@ class FluigRestService
             'token_secret' => config('fluig.tokenSecret')
         ]);
 
-        $this->client->getEmitter()->attach($middleware);
+        $stack->push($middleware);
+
+        $this->client = new Client([
+            'base_uri' => config('fluig.domain'),
+            'verify' => false,
+            'auth' => 'oauth',
+            'handler' => $stack
+        ]);
 
     }
 }

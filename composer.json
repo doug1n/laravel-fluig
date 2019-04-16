@@ -14,8 +14,8 @@
     "php": "^7.1",
     "ext-soap": "*",
     "ext-json": "*",
-    "guzzlehttp/guzzle": "^5.3",
-    "guzzlehttp/oauth-subscriber": "^0.2.0"
+    "guzzlehttp/guzzle": "^6.3",
+    "guzzlehttp/oauth-subscriber": "0.3.*"
   },
   "require-dev": {
     "orchestra/testbench": "3.8.x-dev"
