@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dougl
- * Date: 22/03/2019
- * Time: 21:46
- */
 
 namespace dougvobel\Fluig\Services;
 
