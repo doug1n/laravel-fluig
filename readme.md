@@ -4,8 +4,35 @@
 ## Webservices SOAP
 ### ECMAttributionMecanismService
 - [ ] getAttributionMecanism
+
+Retorna os mecanismos de atribuição da empresa.
+
+<li>Método:
+getAttributionMecanism(String user, String password, int companyId)
+  
+<li>Parâmetros:
+
+-   user: login do usuário.
+-   password: senha do usuário.
+-   companyId: código da empresa.
+
+Retorno:  [AttributionMecanismDto[].
+
 ### ECMBusinessPeriodService
 - [ ] getBusinessPeriods
+Retorna os expedientes da empresa.
+  
+<li>Método:
+
+getBusinessPeriods(String user, String password, int companyId)
+
+<li>Parâmetros:
+
+-   user: login do usuário.
+-   password: senha do usuário.
+-   companyId: código da empresa.
+
+Retorno:  [BusinessPeriodDto[].
 ### ECMCardIndexService
 - [ ] createSimpleCardIndex
 - [ ] createSimpleCardIndexWithDataset
