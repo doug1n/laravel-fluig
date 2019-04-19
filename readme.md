@@ -468,8 +468,8 @@
 - [ ] /ecm/filters/{id} 
 ### FolderDocumentRest
 - [ ] /2.0/folderdocuments/create
-- [ ]/2.0/folderdocuments/listDocumentByFolder
-- [ ]/2.0/folderdocuments/get/{folderId}
+- [ ] /2.0/folderdocuments/listDocumentByFolder
+- [ ] /2.0/folderdocuments/get/{folderId}
 ### GlobalParameterRest
 - [ ] /2.0/globalparameter/getMaxUploadSizeForConnect
 - [ ] /2.0/globalparameter/setMaxUploadSizeForConnect
@@ -520,16 +520,16 @@
 - [ ] /bpm/mechanism/update
 - [ ] /bpm/mechanism/{id}/{process}
 ### MediaServiceRest
-- [ ]/social/community/gallery/new
-- [ ]/social/community/gallery/remove
-- [ ]/social/community/gallery/update
-- [ ]/social/community/media/new
-- [ ]/social/community/media/remove
-- [ ]/social/community/media/update
-- [ ]/social/community/media/{galleryId}/{communityAlias}/{type}
-- [ ]/social/community/gallery/byid/{galleryId}/{communityAlias}/{type}
-- [ ]/social/community/gallery/byname/{galleryName}/{communityAlias}/{type}
-- [ ]/social/community/media/{mediaId}/{galleryId}/{communityAlias}/{type}
+- [ ] /social/community/gallery/new
+- [ ] /social/community/gallery/remove
+- [ ] /social/community/gallery/update
+- [ ] /social/community/media/new
+- [ ] /social/community/media/remove
+- [ ] /social/community/media/update
+- [ ] /social/community/media/{galleryId}/{communityAlias}/{type}
+- [ ] /social/community/gallery/byid/{galleryId}/{communityAlias}/{type}
+- [ ] /social/community/gallery/byname/{galleryName}/{communityAlias}/{type}
+- [ ] /social/community/media/{mediaId}/{galleryId}/{communityAlias}/{type}
 ### MentionServiceRest
 - [ ] /mention/findMentions
 ### MessengerServiceRest
@@ -691,172 +691,118 @@
 - [ ] /socialcloud/listSocial/out/{socialType}/{cloudCode}
 - [ ] /socialcloud/remove/groups/social/{socialType}
 ### SubstituteUserServiceRest
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-
+- [ ] /bpm/substituteUser/create
+- [ ] /bpm/substituteUser/remove
+- [ ] /bpm/substituteUser/update
+- [ ] /bpm/substituteUser/getSubstitutesOfUser/{companyId}/{userId}
+- [ ] /bpm/substituteUser/getValidSubstituteOfUser/{companyId}/{userId}
+- [ ] /bpm/substituteUser/getValidSubstitutedUsers/{companyId}/- [ ] {substituteId}
+- [ ] /bpm/substituteUser/getAllSubstitute/{companyId}/{userId}/- [ ] {substituteId}
+- [ ] /bpm/substituteUser/getAllValidSubstitute/{companyId}/{userI}/{substituteId}
 ### TagsCloudRest
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-
-### TasksRest
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-
+- [ ] /2.0/tags
+### TasksRest	
+- [ ] /2.0/tasks/transfer
+- [ ] /2.0/tasks/findApprovalDocumentsByUser/{colleagueId}
+- [ ] /2.0/tasks/findDocsInAgreement/{colleagueId}
+- [ ] /2.0/tasks/findDocsInCheckout/{colleagueId}
+- [ ] /2.0/tasks/findDocumentsToApprove/{colleagueId}
+- [ ] /2.0/tasks/findExpiredWorkflowTasks/{colleagueId}
+- [ ] /2.0/tasks/findMyDocuments/{colleagueId}
+- [ ] /2.0/tasks/findMyRequests/{colleagueId}
+- [ ] /2.0/tasks/findTasksInAgreement/{colleagueId}
+- [ ] /2.0/tasks/findWorkflowTasks/{colleagueId}
+- [ ] /2.0/tasks/getResumedTasks/{userId}
 ### TenantRest
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-
-### UserRest
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-
+- [ ] /2.0/tenants/create
+- [ ] /2.0/tenants/getTenantData/{keys}
+### UserRest	
+- [ ] /2.0/users/changeUserPassword
+- [ ] /2.0/users/create
+- [ ] /2.0/users/getCurrent
+- [ ] /2.0/users/listAll
+- [ ] /2.0/users/updateUser
+- [ ] /2.0/users/updateUserData
+- [ ] /2.0/users/updateUserEvenDisabled
+- [ ] /2.0/users/activateByCode/{genericId}
+- [ ] /2.0/users/deactivateByLogin/{genericId}
+- [ ] /2.0/users/findById/{id}
+- [ ] /2.0/users/getUser/{genericId}
+- [ ] /2.0/users/list/{state}
+- [ ] /2.0/users/listData/{login}
+- [ ] /2.0/users/listGroups/{login}
+- [ ] /2.0/users/{userCode}/locals
 ### UserServiceRest
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-
+- [ ] /social/listFavoriteUsersWithRelevance
+- [ ] /social/listUsersWithRelevance
+- [ ] /social/user
+- [ ] /social/follow/accept
+- [ ] /social/follow/cleanAll
+- [ ] /social/follow/reject
+- [ ] /social/follow/remove
+- [ ] /social/follow/removeAll
+- [ ] /social/follow/request
+- [ ] /social/follower/{genericId}
+- [ ] /social/following/{genericId}
+- [ ] /social/image/{genericId}
+- [ ] /social/user/{genericId}
+- [ ] /social/change/image/v2
+- [ ] /social/imageBySize/{genericId}/{size}
+- [ ] /social/user/disable/{genericId}
+- [ ] /social/user/enable/{genericId}
+- [ ] /social/user/logged/v2
 ### WCMAdminTenantRest
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-
+- [ ] /admin/tenant
+- [ ] /admin/tenant/analytics
+- [ ] /admin/tenant/disableFluigViewerCloud
+- [ ] /admin/tenant/enableFluigViewerCloud
+- [ ] /admin/tenant/fluigViewerCloudEnabled
+- [ ] /admin/tenant/getEmailConfig
+- [ ] /admin/tenant/identityConfig
+- [ ] /admin/tenant/updateMailConfig
+- [ ] /admin/tenant/disableFluigViewerCloud/{tenantId}
+- [ ] /admin/tenant/enableFluigViewerCloud/{tenantId}
+- [ ] /admin/tenant/fluigViewerCloudEnabled/{tenantId}
+- [ ] /admin/tenant/identityConfig/v2
 ### WCMServiceRest
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-
+- [ ] /wcm/assembleMenu
+- [ ] /wcm/configuration
+- [ ] /wcm/display
+- [ ] /wcm/findPages
+- [ ] /wcm/isHighAvailability
+- [ ] /wcm/logout
+- [ ] /wcm/theme
+- [ ] /wcm/chronos/meanTimes
+- [ ] /wcm/oauth/generateKeys
+- [ ] /wcm/oauth/generateKeysToUser
+- [ ] /wcm/version/v2
+- [ ] /wcm/findPageFriendlyURL/{tenantId}/{pageCode}
 ### WorkflowRest
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ] /2.0/workflows/assumeProcessTask
+- [ ] /2.0/workflows/assumeProcessTasks
+- [ ] /2.0/workflows/cancelInstance
+- [ ] /2.0/workflows/cancelInstances
+- [ ] /2.0/workflows/createProcessObservation
+- [ ] /2.0/workflows/listProcess
+- [ ] /2.0/workflows/findActiveTasks/{processInstanceId}
+- [ ] /2.0/workflows/getProcessVersion/{processId}
+- [ ] /2.0/workflows/requests/listSlaProcess
+- [ ] /2.0/workflows/requests/sla
+- [ ] /2.0/workflows/requests/tasks
+- [ ] /2.0/workflows/getAvailableProcess/{tenantId}/{userId}
+- [ ] /2.0/workflows/requests/sla/resume
+- [ ] /2.0/workflows/requests/tasks/resume
+- [ ] /2.0/workflows/requests/{processInstanceId}/sla
+- [ ] /2.0/workflows/findObservations/{processInstanceId}/{stateSequence}/{threadSequence}
+- [ ] /2.0/workflows/requests/sla/assignee/me
+- [ ] /2.0/workflows/requests/sla/manager/me
+- [ ] /2.0/workflows/requests/sla/requester/me
+- [ ] /2.0/workflows/requests/tasks/assignee/me
+- [ ] /2.0/workflows/requests/tasks/manager/me
+- [ ] /2.0/workflows/requests/tasks/requester/me
+- [ ] /2.0/workflows/requests/sla/resume/assignee/me
+- [ ] /2.0/workflows/requests/sla/resume/manager/me
+- [ ] /2.0/workflows/requests/sla/resume/requester/me
+- [ ] /2.0/workflows/requests/tasks/resume/assignee/me
+- [ ] /2.0/workflows/requests/tasks/resume/manager/me
+- [ ] /2.0/workflows/requests/tasks/resume/requester/me
