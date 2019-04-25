@@ -4,6 +4,7 @@ namespace dougvobel\Fluig\Tests\Feature;
 
 
 use dougvobel\Fluig\Models\Attachment;
+use dougvobel\Fluig\Services\ECMWorkflowEngine;
 use dougvobel\Fluig\Tests\Traits\EnvironmentSetUp;
 use Orchestra\Testbench\TestCase;
 
@@ -20,6 +21,14 @@ class ECMWorkflowEngineTest extends TestCase
         $attachment = (new Attachment("PIS.png", "PIS.png", $arquivo))->toArray();
 
         $this->assertTrue($attachment['fileName'] == 'PIS.png');
+    }
+
+    /** @test */
+    public function get_instance_card_data()
+    {
+        $teste = (new ECMWorkflowEngine())->getInstanceCardData('67586');
+
+        $this->assertTrue(isset($teste->item));
     }
 
 }
