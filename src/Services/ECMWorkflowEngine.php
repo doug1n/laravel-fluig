@@ -151,7 +151,9 @@ class ECMWorkflowEngine extends FluigWebService
         );
 
         if (isset($response->item)) {
-            return $response->item;
+            return array_map(function ($item) {
+                return $item->item;
+            }, $response->item);
         } else {
             throw new \Exception("Erro ao executar Fluig WS.", 500);
         }

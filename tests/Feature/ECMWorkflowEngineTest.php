@@ -26,7 +26,7 @@ class ECMWorkflowEngineTest extends TestCase
     /** @test */
     public function get_instance_card_data()
     {
-        $teste = (new ECMWorkflowEngine())->getInstanceCardData('67586');
+        $teste = (new ECMWorkflowEngine())->getInstanceCardData('67585');
 
         $this->assertTrue(isset($teste->item));
     }
