@@ -1,6 +1,6 @@
 <?php
 
-namespace dougvobel\Fluig;
+namespace doug1n\Fluig;
 
 
 use Illuminate\Support\ServiceProvider;

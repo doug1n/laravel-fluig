@@ -1,6 +1,6 @@
 <?php
 
-namespace dougvobel\Fluig\Services;
+namespace doug1n\Fluig\Services;
 
 
 class ECMWorkflowEngine extends FluigWebService

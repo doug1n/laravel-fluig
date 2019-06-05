@@ -1,6 +1,6 @@
 <?php
 
-namespace dougvobel\Fluig\Services\Rest;
+namespace doug1n\Fluig\Services\Rest;
 
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;

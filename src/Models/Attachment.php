@@ -1,6 +1,6 @@
 <?php
 
-namespace dougvobel\Fluig\Models;
+namespace doug1n\Fluig\Models;
 
 
 class Attachment

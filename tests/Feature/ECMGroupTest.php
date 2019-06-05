@@ -1,11 +1,11 @@
 <?php
 
-namespace dougvobel\Fluig\Tests\Feature;
+namespace doug1n\Fluig\Tests\Feature;
 
 
-use dougvobel\Fluig\Services\ECMColleagueGroup;
-use dougvobel\Fluig\Services\ECMGroup;
-use dougvobel\Fluig\Tests\Traits\EnvironmentSetUp;
+use doug1n\Fluig\Services\ECMColleagueGroup;
+use doug1n\Fluig\Services\ECMGroup;
+use doug1n\Fluig\Tests\Traits\EnvironmentSetUp;
 use Orchestra\Testbench\TestCase;
 
 class ECMGroupTest extends TestCase

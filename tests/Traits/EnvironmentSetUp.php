@@ -1,6 +1,6 @@
 <?php
 
-namespace dougvobel\Fluig\Tests\Traits;
+namespace doug1n\Fluig\Tests\Traits;
 
 
 trait EnvironmentSetUp

@@ -1,5 +1,5 @@
 {
-  "name": "dougvobel/laravel-fluig",
+  "name": "doug1n/laravel-fluig",
   "description": "Tenha acesso aos webservices do fluig em seu Laravel.",
   "type": "library",
   "license": "MIT",
@@ -22,12 +22,12 @@
   },
   "autoload": {
     "psr-4": {
-      "dougvobel\\Fluig\\": "src/"
+      "doug1n\\Fluig\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "dougvobel\\Fluig\\Tests\\": "tests/"
+      "doug1n\\Fluig\\Tests\\": "tests/"
     }
   }
 }
