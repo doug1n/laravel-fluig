@@ -158,4 +158,30 @@ class ECMWorkflowEngine extends FluigWebService
             throw new \Exception("Erro ao executar Fluig WS.", 500);
         }
     }
+
+    /**
+     * Retorna os anexos de uma solicitação.
+     *
+     * @param $processInstanceId
+     * @param null $userId
+     * @param int $companyId
+     * @return mixed
+     * @throws \Exception
+     */
+    public function getAttachments($processInstanceId, $userId = null, $companyId = 1)
+    {
+        $response = $this->soapClient->getAttachments(
+            $this->usuario, //String user
+            $this->senha, //String password
+            $companyId, //int companyId
+            $userId ?: $this->usuarioId,
+            $processInstanceId // int processInstanceId
+        );
+
+        if (isset($response->item)) {
+            return $response->item;
+        } else {
+            throw new \Exception("Erro ao executar Fluig WS.", 500);
+        }
+    }
 }
