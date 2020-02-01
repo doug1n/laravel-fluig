@@ -2,7 +2,13 @@
 
 namespace doug1n\Fluig\Services;
 
-
+/**
+ * Class ECMWorkflowEngine
+ * @package doug1n\Fluig\Services
+ *
+ * Webservice responsável por realizar operações referentes a workflow no fluig. Pode ser utilizado para movimentar
+ * solicitações, entre outros recursos.
+ */
 class ECMWorkflowEngine extends FluigWebService
 {
 
@@ -39,7 +45,7 @@ class ECMWorkflowEngine extends FluigWebService
             $tipoProcesso,
             $choosedState, // int choosedState
             $colleagueIds, // String[] colleagueIds
-            $comments, // String comments
+            $comments, // String commentsattach
             $usuarioId ?: $this->usuarioId, // String userId
             $completeTask, // boolean completeTask
             $anexos, // ProcessAttachmentDto[] attachments
@@ -183,5 +189,164 @@ class ECMWorkflowEngine extends FluigWebService
         } else {
             throw new \Exception("Erro ao executar Fluig WS.", 500);
         }
+    }
+
+    public function updateWorkflowAttachment($processInstanceId, $attachments, $documents = [], $userId = null, $companyId = 1)
+    {
+        $response = $this->soapClient->updateWorkflowAttachment(
+            $this->usuario, //String user
+            $this->senha, //String password
+            $companyId, //int companyId
+            $processInstanceId,
+            $userId ?: $this->usuarioId,
+            $documents,
+            $attachments
+        );
+
+        if (isset($response->item) && $response->item == "Documento editado com sucesso") {
+            return $response->item;
+        } else {
+            throw new \Exception("Erro ao executar Fluig WS.", 500);
+        }
+    }
+
+    public function calculateDeadLineHours()
+    {
+    }
+
+    public function calculateDeadLineTime()
+    {
+    }
+
+    public function cancelInstance()
+    {
+    }
+
+    public function cancelInstanceByReplacement()
+    {
+    }
+
+    public function createWorkFlowProcessVersion()
+    {
+    }
+
+    public function exportProcess()
+    {
+    }
+
+    public function exportProcessInZipFormat()
+    {
+    }
+
+    public function getActualThread()
+    {
+    }
+
+    public function getAllActiveStates()
+    {
+    }
+
+    public function getAllProcessAvailableToExport()
+    {
+    }
+
+    public function getAllProcessAvailableToImport()
+    {
+    }
+
+    public function getAvailableProcess()
+    {
+    }
+
+    public function getAvailableProcessOnDemand()
+    {
+    }
+
+    public function getAvailableStates()
+    {
+    }
+
+    public function getAvailableStatesDetail()
+    {
+    }
+
+    public function getAvailableUsers()
+    {
+    }
+
+    public function getAvailableUsersOnDemand()
+    {
+    }
+
+    public function getAvailableUsersStart()
+    {
+    }
+
+    public function getAvailableUsersStartOnDemand()
+    {
+    }
+
+    public function getCardValue()
+    {
+    }
+
+    public function getHistories()
+    {
+    }
+
+    public function getProcessFormId()
+    {
+    }
+
+    public function getWorkFlowProcessVersion()
+    {
+    }
+
+    public function importProcess()
+    {
+    }
+
+    public function importProcessWithCard()
+    {
+    }
+
+    public function releaseProcess()
+    {
+    }
+
+    public function saveAndSendTaskByReplacement()
+    {
+    }
+
+    public function saveAndSendTaskClassic()
+    {
+    }
+
+    public function searchProcess()
+    {
+    }
+
+    public function setAutomaticDecisionClassic()
+    {
+    }
+
+    public function setDueDate()
+    {
+    }
+
+    public function simpleStartProcess()
+    {
+    }
+
+    public function startProcessClassic()
+    {
+    }
+
+    public function takeProcessTask()
+    {
+    }
+
+    public function takeProcessTaskByReplacement()
+    {
     }
 }

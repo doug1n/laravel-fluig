@@ -2,7 +2,14 @@
 
 namespace doug1n\Fluig\Services;
 
-
+/**
+ * Class ECMColleagueGroup
+ * @package doug1n\Fluig\Services
+ *
+ * Webservice responsável por realizar operações referentes aos grupos de usuários no fluig. Pode ser utilizado para
+ * relacionar um usuário a um grupo de usuários e serve também para alterar, excluir e pesquisar esses relacionamentos
+ * criados.
+ */
 class ECMColleagueGroup extends FluigWebService
 {
 
@@ -12,6 +19,67 @@ class ECMColleagueGroup extends FluigWebService
     public function __construct()
     {
         parent::__construct("/webdesk/ECMColleagueGroupService?wsdl");
+    }
+
+    /**
+     * Associa um usuário a um grupo.
+     *
+     * @param $grupoColaborador
+     * @param int $companyId
+     * @return mixed
+     */
+    public function createColleagueGroup($grupoColaborador, $companyId = 1)
+    {
+        $response = $this->soapClient->createColleagueGroup(
+            $this->usuario,
+            $this->senha,
+            $companyId,
+            $grupoColaborador
+        );
+
+        return $response;
+    }
+
+    /**
+     * Exclui um usuário de um grupo.
+     *
+     * @param $groupId
+     * @param $colleagueId
+     * @param int $companyId
+     * @return mixed
+     */
+    public function deleteColleagueGroup($groupId, $colleagueId, $companyId = 1)
+    {
+        $response = $this->soapClient->deleteColleagueGroup(
+            $this->usuario,
+            $this->senha,
+            $companyId,
+            $groupId,
+            $colleagueId
+        );
+
+        return $response;
+    }
+
+    /**
+     * Retorna somente um grupo que determinado usuário participa.
+     *
+     * @param $groupId
+     * @param $colleagueId
+     * @param int $companyId
+     * @return mixed
+     */
+    public function getColleagueGroup($groupId, $colleagueId, $companyId = 1)
+    {
+        $response = $this->soapClient->getColleagueGroup(
+            $this->usuario,
+            $this->senha,
+            $companyId,
+            $groupId,
+            $colleagueId
+        );
+
+        return $response;
     }
 
     /**

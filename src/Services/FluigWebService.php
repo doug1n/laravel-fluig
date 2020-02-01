@@ -2,7 +2,6 @@
 
 namespace doug1n\Fluig\Services;
 
-
 class FluigWebService
 {
     protected $endPoint;

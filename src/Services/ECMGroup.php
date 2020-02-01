@@ -2,7 +2,13 @@
 
 namespace doug1n\Fluig\Services;
 
-
+/**
+ * Class ECMGroup
+ * @package doug1n\Fluig\Services
+ *
+ * Webservice responsável por realizar operações referentes a grupos no fluig. Pode ser utilizado para criar, alterar,
+ * excluir e procurar grupos, entre outros recursos.
+ */
 class ECMGroup extends FluigWebService
 {
 

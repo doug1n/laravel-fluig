@@ -39,4 +39,21 @@ class ECMWorkflowEngineTest extends TestCase
         $this->assertTrue($teste[0]->processInstanceId == 67657);
     }
 
+    /** @test */
+    public function start_process()
+    {
+        $teste = (new ECMWorkflowEngine())->startProcess(
+            'lara-admissao-v1',
+            [['empresa', '100102']],
+            [],
+            'Iae rapaziada!',
+            '8pcfzvgargn12nk81521060787497',
+            [],
+            false,
+            false
+        );
+
+        dd($teste);
+    }
+
 }
